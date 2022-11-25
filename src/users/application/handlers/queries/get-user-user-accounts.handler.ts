@@ -15,13 +15,16 @@ export class GetUserUserAccountHandler implements IQueryHandler<GetUserUserAccou
       id,
       name as firstName,
       lastname as lastName,
-      email as email,
+      email,
+      number as Number,
+      nickname as NickName,
+      password as Password
     FROM 
       users
     WHERE
       userType = 'free'
     ORDER BY
-      name;`;
+      lastname, name;`;
     const rows = await manager.query(sql);
     if (rows.length <= 0) return [];
     const userClients: UserUserAccountDto[] = rows.map(function (row: any) {

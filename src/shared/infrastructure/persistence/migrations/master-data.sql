@@ -1,7 +1,7 @@
 INSERT INTO users(id, name, lastname, email, number, nickname, password, userType) VALUES
 ('00100001', 'Julio', 'Ramirez', 'juliorz123@gmail.com', '985344571', 'julz99', 'ramirez12345', 'free'),
 ('00100002', 'Darlin', 'Montenegro', 'montenegrodn111@gmail.com', '947775341', 'darlin111', 'montenegro994', 'free'),
-('00100003', 'Damian', 'Valto', 'damianvalto91@gmail.com', '991237648', 'damianv123', 'valto123456', 'subscription');
+('00100003', 'Damian', 'Valto', 'damianvalto91@gmail.com', '991237648', 'damianv123', 'valto123456', 'free');
 
 INSERT INTO cards(id, cardType, numberCard, cvv, expMonth, expYear, user_id) VALUES
 ('001000000001', 'VISA', '4110916512962123', '701', '01', '2022', '00100001'),

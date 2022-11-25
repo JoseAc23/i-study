@@ -6,9 +6,14 @@ import { UserFullNameValue } from '../values/user-full-name.value';
 import { ChildEntity, Column } from 'typeorm';
 import { UserType } from '../../../domain/aggregates/user/user-type.enum';
 import { UserAccountEntity } from './user-account.entity';
+import { Entity, PrimaryGeneratedColumn, TableInheritance } from 'typeorm';
+
 
 @ChildEntity(UserType.USER)
 export class UserEntity extends UserAccountEntity {
+  @PrimaryGeneratedColumn('increment', { type: 'bigint', name: 'id', unsigned: true })
+  public id: number;
+  
   @Column((type) => UserFullNameValue, { prefix: false })
   public fullName: UserFullNameValue;
 

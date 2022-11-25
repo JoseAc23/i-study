@@ -19,6 +19,7 @@ export class UserController {
 
   @Post('')
   @ApiOperation({ summary: 'Register User Client' })
+  
   async register(
     @Body() registerUserRequest: RegisterUserRequest,
     @Res({ passthrough: true }) response
