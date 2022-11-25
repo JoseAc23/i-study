@@ -10,7 +10,7 @@ import { NotificationsModule } from './notifications/notifications.module';
   imports: [
     TypeOrmModule.forRoot({
       type: "mysql",
-      url: 'mysql://root:root@localhost:3307/istudy',
+      url: 'mysql://JotaAc23:Onlykao23+@localhost:3306/istudy',
       migrationsRun: true,
       logging: true,
       timezone: '+00:00',
